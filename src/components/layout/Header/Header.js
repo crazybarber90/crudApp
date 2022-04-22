@@ -25,7 +25,7 @@ const Header = () => {
             navigate("/contact");
           }}
         >
-          Contact
+          Contact Contact Contact
         </li>
       </ul>
     </>
