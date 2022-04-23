@@ -2,9 +2,9 @@ import FooterStyle from "./style";
 
 const Footer = () => {
   return (
-    <>
-      <div>FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER </div>
-    </>
+    <FooterStyle>
+      <div>Povered by ReactClass &copy; {new Date().getFullYear()} </div>
+    </FooterStyle>
   );
 };
 
