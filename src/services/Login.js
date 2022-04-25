@@ -1,12 +1,12 @@
-export const submit = (data, setIsLoggedIn, email, name) => {
+export const submit = (data, setIsLoggedIn, email, name, textArea) => {
   const isLoginSuccess = data.filter((d) => {
-    return d.name === name && d.email === email;
+    return d.name === name && d.email === email && d.textArea === textArea;
   });
   if (isLoginSuccess.length > 0) {
-    console.log("Logovan sam");
+    console.log("Ulogovan");
     setIsLoggedIn(true);
   } else {
-    console.log("Nisam logovan");
+    console.log("Izlogovan");
     setIsLoggedIn(false);
   }
 };

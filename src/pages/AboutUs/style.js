@@ -5,4 +5,8 @@ export default styled.div`
   margin: 30px auto;
   border: solid 3px lightblue;
   padding: 20px;
+
+  .span {
+    color: red;
+  }
 `;

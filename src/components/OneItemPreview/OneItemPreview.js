@@ -1,10 +1,11 @@
 import OneItemPreviewStyle from "./style";
 import Button from "../parts/Button";
+import { closeItemPreview } from "../../services/closeItemPreview";
 
 const OneItemPreview = (props) => {
-  const closeItemPreview = () => {
-    //TREBA VRATITI SA ONE ITEM PREVIEW NA 4 ITEMA SA PREDHODNE STRANE
-  };
+  // const closeItemPreview = () => {
+  //   //TREBA VRATITI SA ONE ITEM PREVIEW NA 4 ITEMA SA PREDHODNE STRANE
+  // };
 
   return (
     <OneItemPreviewStyle>

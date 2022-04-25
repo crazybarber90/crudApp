@@ -44,7 +44,13 @@ const Login = (props) => {
       />
 
       <Button
-        buttonOnSubmit={submit(data, props.setIsLoggedIn, email, name)}
+        buttonOnSubmit={submit(
+          data,
+          props.setIsLoggedIn,
+          email,
+          name,
+          textArea
+        )}
         buttonTitle="Submit"
       />
     </LoginFormStyle>

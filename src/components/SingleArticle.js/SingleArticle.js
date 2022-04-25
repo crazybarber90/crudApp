@@ -1,7 +1,9 @@
+import React, { useState } from "react";
 import SingleArticleStyle from "./style";
+// IMAGES -----------------------------------------------
 import close from "../../images/close.png";
 import settings from "../../images/mechanical-gears-.png";
-import React, { useState } from "react";
+//--------------------------------------------------------
 
 const SingleArticle = (props) => {
   const [allArticles, setAllArticles] = useState(true);
@@ -10,7 +12,7 @@ const SingleArticle = (props) => {
   const previevArticle = (key) => {};
 
   return (
-    <SingleArticleStyle key={props.key}>
+    <SingleArticleStyle key={props.key} previevArticle={previevArticle}>
       <div className="singleArticle">
         <div className="headerOfArticle">
           <img src={settings} />
