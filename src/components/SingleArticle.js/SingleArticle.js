@@ -6,13 +6,16 @@ import settings from "../../images/mechanical-gears-.png";
 //--------------------------------------------------------
 
 const SingleArticle = (props) => {
-  const [allArticles, setAllArticles] = useState(true);
-  const [previewSingleArticle, setPreviewSingleArticles] = useState(false);
-
-  const previevArticle = (key) => {};
+  const previevArticle = (key) => {
+    // props.setOneItemPreview(true);
+  };
 
   return (
-    <SingleArticleStyle key={props.key} previevArticle={previevArticle}>
+    <SingleArticleStyle
+      key={props.key}
+      // oneItemPreview={oneItemPreview}
+      // setOneItemPreview={props.setOneItemPreview}
+    >
       <div className="singleArticle">
         <div className="headerOfArticle">
           <img src={settings} />

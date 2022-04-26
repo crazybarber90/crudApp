@@ -1,12 +1,29 @@
-export const submit = (data, setIsLoggedIn, email, name, textArea) => {
+export const submit = (
+  data,
+  setIsLoggedIn,
+  setIsVisible,
+  email,
+  name,
+  textArea
+) => {
   const isLoginSuccess = data.filter((d) => {
-    return d.name === name && d.email === email && d.textArea === textArea;
+    console.log(setIsVisible);
+    return d.name === name && d.email === email;
   });
-  if (isLoginSuccess.length > 0) {
-    console.log("Ulogovan");
-    setIsLoggedIn(true);
-  } else {
-    console.log("Izlogovan");
-    setIsLoggedIn(false);
+  // if (isLoginSuccess.length > 0 && textArea !== "") {
+  //   setIsLoggedIn(true);
+  //   setIsVisible(true);
+  // } else {
+  //   setIsLoggedIn(false);
+  //   // setIsVisible(false);
+  //   //setIsVisible default state is false
+  // }
+
+  {
+    isLoginSuccess.length > 0 && textArea !== ""
+      ? setIsLoggedIn(true) && setIsVisible(true)
+      : setIsLoggedIn(false);
+    // setIsVisible(false);
+    //setIsVisible default state is false}
   }
 };

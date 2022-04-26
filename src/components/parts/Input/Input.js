@@ -1,8 +1,8 @@
-import inputStyle from "./style";
+import InputStyle from "./style";
 
 const Input = (props) => {
   return (
-    <inputStyle>
+    <InputStyle>
       <input
         className="input"
         style={{ margin: "10px 0", padding: "10px" }} //MALO INLINE STYLE AKO JE NEGDE POTREBNO :)
@@ -10,7 +10,7 @@ const Input = (props) => {
         placeholder={props.fieldPlaceholder}
         onChange={props.fieldOnChange}
       />
-    </inputStyle>
+    </InputStyle>
   );
 };
 

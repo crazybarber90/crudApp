@@ -1,5 +1,5 @@
 import RightPartStyle from "./style";
-const RightPart = () => {
+const RightPart = (props) => {
   return (
     <RightPartStyle>
       {/* <div className="rightPart"> */}

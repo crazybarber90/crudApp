@@ -49,6 +49,7 @@ const Login = (props) => {
           props.setIsLoggedIn,
           email,
           name,
+          props.setIsVisible,
           textArea
         )}
         buttonTitle="Submit"

@@ -17,24 +17,27 @@ export default function Home(title, key, previevArticle) {
         title="Blue Article"
         key={1}
         previevArticle={previevArticle}
+        setOneItemPreview={setOneItemPreview}
       />
       <SingleArticle
         title="Red Article"
         key={2}
         previevArticle={previevArticle}
+        setOneItemPreview={setOneItemPreview}
       />
       <SingleArticle
         title="Green Article"
         key={3}
         previevArticle={previevArticle}
+        setOneItemPreview={setOneItemPreview}
       />
       <SingleArticle
         title="Orange Article"
         key={4}
         previevArticle={previevArticle}
+        setOneItemPreview={setOneItemPreview}
       />
-
-      <OneItemPreview />
+      {oneItemPreview && <OneItemPreview />}
     </HomePageStyle>
   );
 }
