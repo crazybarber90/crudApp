@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import OneItemPreview from "../../components/OneItemPreview/OneItemPreview";
 
 //this is an example of the destruction of prop's
-export default function Home(title, key, previevArticle) {
+export default function Home(title, id, previevArticle) {
   const [allArticles, setAllArticles] = useState(true);
   const [oneItemPreview, setOneItemPreview] = useState(false);
   // const navigate = useNavigate();
@@ -15,29 +15,29 @@ export default function Home(title, key, previevArticle) {
       {/* <h1>homepage</h1> */}
       <SingleArticle
         title="Blue Article"
-        key={1}
+        id={1}
         previevArticle={previevArticle}
-        setOneItemPreview={setOneItemPreview}
+        // setOneItemPreview={setOneItemPreview}
       />
       <SingleArticle
         title="Red Article"
-        key={2}
+        id={2}
         previevArticle={previevArticle}
-        setOneItemPreview={setOneItemPreview}
+        // setOneItemPreview={setOneItemPreview}
       />
       <SingleArticle
         title="Green Article"
-        key={3}
+        id={3}
         previevArticle={previevArticle}
-        setOneItemPreview={setOneItemPreview}
+        // setOneItemPreview={setOneItemPreview}
       />
       <SingleArticle
         title="Orange Article"
-        key={4}
+        id={4}
         previevArticle={previevArticle}
-        setOneItemPreview={setOneItemPreview}
+        // setOneItemPreview={setOneItemPreview}
       />
-      {oneItemPreview && <OneItemPreview />}
+      {oneItemPreview && <OneItemPreview setOneItemPreview={false} id={id} />}
     </HomePageStyle>
   );
 }

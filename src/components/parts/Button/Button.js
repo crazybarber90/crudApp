@@ -7,6 +7,8 @@ const Button = (props) => {
         className="button"
         onClick={props.buttonOnSubmit}
         setIsVisible={props.setIsVisible}
+        setIsLoggedIn={props.setIsLoggedIn}
+        type={props.type}
       >
         {props.buttonTitle}
       </button>

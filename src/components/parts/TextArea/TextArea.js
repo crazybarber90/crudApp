@@ -5,8 +5,9 @@ const TextArea = (props) => {
     <TextAreaStyle>
       <textarea
         className="textarea"
-        type={props.fieldType}
+        // type={props.fieldType}
         placeholder={props.fieldPlaceholder}
+        onChange={props.fieldOnChange}
       />
     </TextAreaStyle>
   );

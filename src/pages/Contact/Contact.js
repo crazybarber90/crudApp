@@ -5,7 +5,7 @@ import RightPart from "../../components/LoginRightPart.js";
 import ContactStyle from "./style";
 import React, { useState } from "react";
 
-export default function Contact() {
+export default function Contact(props) {
   // const navigate = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isVisible, setIsVisible] = useState(false);

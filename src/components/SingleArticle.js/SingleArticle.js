@@ -6,14 +6,15 @@ import settings from "../../images/mechanical-gears-.png";
 //--------------------------------------------------------
 
 const SingleArticle = (props) => {
-  const previevArticle = (key) => {
+  const previevArticle = (id) => {
+    // myItems.filter((item) => (item.id = id));
     // props.setOneItemPreview(true);
   };
 
   return (
     <SingleArticleStyle
-      key={props.key}
-      // oneItemPreview={oneItemPreview}
+      id={props.id}
+      oneItemPreview={props.oneItemPreview}
       // setOneItemPreview={props.setOneItemPreview}
     >
       <div className="singleArticle">
@@ -22,7 +23,7 @@ const SingleArticle = (props) => {
           <img src={close} />
         </div>
         <div className="bodyOfArticle">
-          <h3 onClick={previevArticle()}>{props.title}</h3>
+          <h3 onClick={previevArticle}>{props.title}</h3>
         </div>
         <div className="footerOfArticle">25.06.1991 17:25</div>
       </div>
