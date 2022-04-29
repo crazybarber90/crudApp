@@ -5,7 +5,7 @@ const Input = (props) => {
     <InputStyle>
       <input
         className="input"
-        style={{ margin: "10px 0", padding: "10px" }} //MALO INLINE STYLE AKO JE NEGDE POTREBNO :)
+        style={{ margin: "10px 0", padding: "10px" }} //inline style
         type={props.fieldType}
         placeholder={props.fieldPlaceholder}
         onChange={props.fieldOnChange}

@@ -3,23 +3,21 @@ import Input from "../parts/Input";
 import React, { useState } from "react";
 import TextArea from "../parts/TextArea";
 import { showMessage } from "../../services/Alerts";
+
+//credentials which will apear under login form!
 import Credentials from "../parts/Credentials/Credentials";
+
+//data for success login
+import { data } from "../../components/helpers/loginData";
+
 import Button from "../parts/Button";
 // import { submit } from "../../services/Login";
 import { handleFormSubmit } from "../../services/handleFormSubmit";
 
-const Login = ({ setIsLoggedIn, setIsVisible }) => {
+const Login = ({ setIsLoggedIn, setIsVisible, setLoginData }) => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [textArea, setTextArea] = useState("");
-
-  const data = [
-    {
-      name: "nikola",
-      email: "nikola@react.com",
-      textArea: "",
-    },
-  ];
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
@@ -27,10 +25,10 @@ const Login = ({ setIsLoggedIn, setIsVisible }) => {
       return d.name === name && d.email === email;
     });
     if (isLoginSuccess.length > 0 && textArea !== "") {
-      console.log("usao");
       setIsLoggedIn(true);
       setIsVisible(true);
       showMessage("You got it", "success", 3000);
+      setLoginData({ name: name, email: email, textArea: textArea });
     } else if (name === "" || email === "") {
       showMessage("empty fields", "error", 3000);
     } else if (
@@ -42,7 +40,6 @@ const Login = ({ setIsLoggedIn, setIsVisible }) => {
     } else if (textArea === "") {
       showMessage("Make a question", "question", 3000);
     } else {
-      console.log("nije usao");
       showMessage("Wrong credentials", "error", 3000);
       setIsLoggedIn(false);
     }

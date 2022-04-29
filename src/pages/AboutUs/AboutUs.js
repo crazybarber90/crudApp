@@ -1,12 +1,8 @@
-import { useNavigate } from "react-router-dom";
-import Layout from "../../components/layout/Layout";
 import AboutUsStyle from "./style";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 export default function AboutUs() {
-  // const navigate = useNavigate();
-
   const [title, setTitle] = useState("");
 
   const getData = () => {
@@ -14,9 +10,8 @@ export default function AboutUs() {
       .get("https://jsonplaceholder.typicode.com/todos/")
 
       .then(function (response) {
-        console.log(response.data[0].title);
+        // console.log(response.data[0].title);
         setTitle(response.data[0].title);
-        // setTitle(response.data.title);
       })
 
       .catch(function (error) {

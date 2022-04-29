@@ -4,7 +4,7 @@ export default styled.div`
   width: 100%;
   background-color: lightblue;
   margin: 30px auto 0;
-  height: 70vh;
+  height: 60vh;
   .button {
     margin-top: 100px;
   }

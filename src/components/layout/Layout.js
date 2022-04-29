@@ -15,9 +15,3 @@ export default function Layout(props) {
     </>
   );
 }
-
-{
-  /* <Header setIsLoggedIn={props.isLoggedIn} />
-{props.children}
-<Footer /> */
-}
