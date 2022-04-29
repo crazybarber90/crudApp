@@ -5,7 +5,7 @@ const Button = (props) => {
     <ButtonStyle>
       <button
         className="button"
-        onClick={props.buttonOnSubmit}
+        onClick={(e) => props.buttonOnSubmit(e)}
         setIsVisible={props.setIsVisible}
         setIsLoggedIn={props.setIsLoggedIn}
         type={props.type}

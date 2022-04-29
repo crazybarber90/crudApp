@@ -8,7 +8,6 @@ const Credentials = () => {
         validacija kompletno odradjena za praznu textArea, i za nevalidan format
         e-mail
       </p>
-      ;
     </>
   );
 };

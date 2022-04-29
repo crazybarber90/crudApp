@@ -6,6 +6,7 @@ export default styled.div`
   padding: 10px;
   background-color: lightblue;
   margin: 20px;
+  position: relative;
 
   .headerOfArticle {
     /* border: solid 1px black; */

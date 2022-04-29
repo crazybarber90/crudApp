@@ -9,6 +9,8 @@ const Input = (props) => {
         type={props.fieldType}
         placeholder={props.fieldPlaceholder}
         onChange={props.fieldOnChange}
+        name={props.name}
+        defaultValue={props.value}
       />
     </InputStyle>
   );

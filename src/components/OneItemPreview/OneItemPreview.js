@@ -8,8 +8,8 @@ const OneItemPreview = (props) => {
         buttonTitle="Back"
         buttonOnSubmit={() => props.setOneItemPreview(!props.oneItemPreview)}
       />
-      <h1 className="title">{props.title}</h1>
-      <p className="date">{props.date}</p>
+      <h1 className="title">{props.oneItemData.title}</h1>
+      <p className="date">{props.oneItemData.date}</p>
     </OneItemPreviewStyle>
   );
 };

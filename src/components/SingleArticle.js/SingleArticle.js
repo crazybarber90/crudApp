@@ -1,40 +1,53 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import SingleArticleStyle from "./style";
-import OneItemPreview from "../../components/OneItemPreview";
 import close from "../../images/close.png";
 import settings from "../../images/mechanical-gears-.png";
+import OneItemEdit from "../OneItemEdit";
 
 const SingleArticle = (props) => {
+  const [showOneItemEdit, setShowOneItemEdit] = useState(false);
+
   // Function that will show and remove clicked article !
-  const previevArticle = (id) => {
-    // articlesData.filter((item) => item.id === props.id) &&
+  const previevArticle = (id, title, date) => {
     props.setOneItemPreview(!props.oneItemPreview);
+    props.setOneItemData({ title: title, id: id, date: date });
+  };
+
+  const removeArticle = (id) => {
+    let newData = props.allData.filter((item) => item.id !== props.id);
+    // console.log("newData", newData);
+    props.setAllData(newData);
   };
 
   return (
-    <>
-      {props.oneItemPreview && (
-        <OneItemPreview
+    <SingleArticleStyle>
+      {showOneItemEdit && (
+        <OneItemEdit
+          id={props.id}
           title={props.title}
           date={props.date}
-          id={props.id}
-          oneItemPreview={props.oneItemPreview}
-          setOneItemPreview={props.setOneItemPreview}
+          setShowOneItemEdit={setShowOneItemEdit}
+          showOneItemEdit={showOneItemEdit}
+          setAllData={props.setAllData}
+          allData={props.allData}
         />
       )}
-      <SingleArticleStyle>
-        <div className="singleArticle">
-          <div className="headerOfArticle">
-            <img src={settings} />
-            <img src={close} />
-          </div>
-          <div className="bodyOfArticle">
-            <h3 onClick={previevArticle}>{props.title}</h3>
-          </div>
-          <div className="footerOfArticle">{props.date}</div>
+      <div className="singleArticle">
+        <div className="headerOfArticle">
+          <img
+            src={settings}
+            onClick={() => setShowOneItemEdit(!showOneItemEdit)}
+          />
+          <img src={close} onClick={() => removeArticle(props.id)} />
         </div>
-      </SingleArticleStyle>
-    </>
+        <div className="bodyOfArticle">
+          <h3 onClick={() => previevArticle(props.id, props.title, props.date)}>
+            {props.title}
+          </h3>
+        </div>
+        <div className="footerOfArticle">{props.date}</div>
+      </div>
+    </SingleArticleStyle>
   );
 };
 

@@ -79,10 +79,19 @@ const Login = ({ setIsLoggedIn, setIsVisible, setLoginData }) => {
         <button type="submit">click</button>
       </form>
       {/* <Button
-        type={submit(data, setIsLoggedIn, email, name, setIsVisible, textArea)}
+        buttonOnSubmit={handleFormSubmit(
+          e,
+          data,
+          email,
+          name,
+          textArea,
+          setIsLoggedIn,
+          setIsVisible,
+          showMessage,
+        )}
         buttonTitle="Submit"
-      /> */}
 
+      /> */}
       <Credentials />
     </LoginFormStyle>
   );
